@@ -21,6 +21,10 @@ if (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
     set(MACOSX TRUE)
 endif()
 
+if(CMAKE_SYSTEM_NAME MATCHES "Windows")
+    set(WINDOWS TRUE)
+endif()
+
 if (ARCH_IA32 OR ARCH_X86_64)
   option(FAT_RUNTIME "Build a library that supports multiple microarchitectures" ON)
 else()
